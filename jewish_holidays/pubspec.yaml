@@ -1,0 +1,23 @@
+name: jewish_holidays
+description: >-
+  Jewish holidays for any Hebrew date: Shabbat, Yom Tov, Chol HaMoed, Rosh Chodesh, Chanukah, Purim and fast days, in Israel and the diaspora.
+version: 1.0.0
+repository: https://github.com/jewish-core/dart/tree/main/jewish_holidays
+issue_tracker: https://github.com/jewish-core/dart/issues
+topics:
+  - jewish
+  - hebrew-calendar
+  - holidays
+  - shabbat
+  - calendar
+resolution: workspace
+
+environment:
+  sdk: ^3.9.0
+
+dependencies:
+  jewish_date: ^1.0.0
+
+dev_dependencies:
+  lints: ^6.0.0
+  test: ^1.26.0

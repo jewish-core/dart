@@ -1,0 +1,15 @@
+# Dart
+.dart_tool/
+build/
+coverage/
+doc/api/
+
+# Libraries do not commit their lock file
+pubspec.lock
+
+# IDEs and OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db

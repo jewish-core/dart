@@ -1,0 +1,25 @@
+name: jewish_zmanim
+description: >-
+  Halachic times (zmanim) per city: sunrise, sunset, nightfall, candle lighting and the Shabbat and Yom Tov window, in the city's time zone.
+version: 1.0.0
+repository: https://github.com/jewish-core/dart/tree/main/jewish_zmanim
+issue_tracker: https://github.com/jewish-core/dart/issues
+topics:
+  - jewish
+  - zmanim
+  - shabbat
+  - sunrise
+  - hebrew-calendar
+resolution: workspace
+
+environment:
+  sdk: ^3.9.0
+
+dependencies:
+  jewish_date: ^1.0.0
+  jewish_holidays: ^1.0.0
+  timezone: '>=0.10.1 <0.12.0'
+
+dev_dependencies:
+  lints: ^6.0.0
+  test: ^1.26.0

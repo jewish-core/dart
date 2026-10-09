@@ -1,0 +1,3 @@
+# The parity fixtures (up to 1.2 MB of JSON) are for this repository's tests,
+# not for users of the package.
+test/fixtures/

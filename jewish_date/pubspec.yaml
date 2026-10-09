@@ -1,0 +1,20 @@
+name: jewish_date
+description: >-
+  Hebrew (Jewish) calendar dates: convert between Gregorian and Hebrew dates, month names, gematria and Hebrew date formatting.
+version: 1.0.0
+repository: https://github.com/jewish-core/dart/tree/main/jewish_date
+issue_tracker: https://github.com/jewish-core/dart/issues
+topics:
+  - jewish
+  - hebrew-calendar
+  - calendar
+  - gematria
+  - date
+resolution: workspace
+
+environment:
+  sdk: ^3.9.0
+
+dev_dependencies:
+  lints: ^6.0.0
+  test: ^1.26.0

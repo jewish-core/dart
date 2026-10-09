@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    name: Dart ${{ matrix.sdk }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        sdk: ['3.9.0', stable]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: ${{ matrix.sdk }}
+      - run: dart pub get
+      - run: dart format --output=none --set-exit-if-changed .
+      - run: dart analyze --fatal-infos
+      - name: Test
+        run: |
+          for p in jewish_date jewish_holidays jewish_zmanim; do
+            (cd "$p" && dart test)
+          done
+      - name: Publish dry run
+        run: |
+          for p in jewish_date jewish_holidays jewish_zmanim; do
+            (cd "$p" && dart pub publish --dry-run)
+          done
