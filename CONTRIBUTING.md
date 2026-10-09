@@ -9,7 +9,7 @@ Dart 3.9 or later. From the repository root:
 
 ```sh
 dart pub get
-for p in jewish_date jewish_holidays jewish_zmanim; do (cd "$p" && dart test); done
+for p in packages/*/; do (cd "$p" && dart test); done
 ```
 
 Run the tests from inside each package, as the loop does, because the tests load their fixtures from

@@ -1,7 +1,7 @@
 version: 2
 updates:
   - package-ecosystem: pub
-    directories: ['/jewish_date', '/jewish_holidays', '/jewish_zmanim']
+    directories: ['/packages/*']
     schedule:
       interval: weekly
   - package-ecosystem: github-actions

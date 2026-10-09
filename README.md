@@ -10,9 +10,9 @@ web. Part of [jewish-core](https://github.com/jewish-core): the same libraries a
 
 | Package | | Use it to |
 |---|---|---|
-| [`jewish_date`](jewish_date) | [![pub](https://img.shields.io/pub/v/jewish_date.svg)](https://pub.dev/packages/jewish_date) | convert between Gregorian and Hebrew dates, and write them in Hebrew letters |
-| [`jewish_holidays`](jewish_holidays) | [![pub](https://img.shields.io/pub/v/jewish_holidays.svg)](https://pub.dev/packages/jewish_holidays) | tell whether a day is Shabbat, Yom Tov, Chol HaMoed, Rosh Chodesh, Chanukah, Purim or a fast day |
-| [`jewish_zmanim`](jewish_zmanim) | [![pub](https://img.shields.io/pub/v/jewish_zmanim.svg)](https://pub.dev/packages/jewish_zmanim) | compute sunrise, sunset, nightfall and candle lighting, and tell whether it is Shabbat now |
+| [`jewish_date`](packages/jewish_date) | [![pub](https://img.shields.io/pub/v/jewish_date.svg)](https://pub.dev/packages/jewish_date) | convert between Gregorian and Hebrew dates, and write them in Hebrew letters |
+| [`jewish_holidays`](packages/jewish_holidays) | [![pub](https://img.shields.io/pub/v/jewish_holidays.svg)](https://pub.dev/packages/jewish_holidays) | tell whether a day is Shabbat, Yom Tov, Chol HaMoed, Rosh Chodesh, Chanukah, Purim or a fast day |
+| [`jewish_zmanim`](packages/jewish_zmanim) | [![pub](https://img.shields.io/pub/v/jewish_zmanim.svg)](https://pub.dev/packages/jewish_zmanim) | compute sunrise, sunset, nightfall and candle lighting, and tell whether it is Shabbat now |
 
 `jewish_holidays` depends on `jewish_date`, and `jewish_zmanim` depends on both. Add only the ones you
 import:
@@ -53,8 +53,8 @@ void main() {
 ```
 
 Each package README has the full guide:
-[jewish_date](jewish_date/README.md), [jewish_holidays](jewish_holidays/README.md) and
-[jewish_zmanim](jewish_zmanim/README.md).
+[jewish_date](packages/jewish_date/README.md), [jewish_holidays](packages/jewish_holidays/README.md) and
+[jewish_zmanim](packages/jewish_zmanim/README.md).
 
 ## Parity with npm
 
@@ -76,7 +76,7 @@ Dart 3.9 or later. This repository is a [pub workspace](https://dart.dev/tools/p
 dart pub get                 # once, at the root: links the three packages
 dart format .
 dart analyze --fatal-infos
-for p in jewish_date jewish_holidays jewish_zmanim; do (cd "$p" && dart test); done
+for p in packages/*/; do (cd "$p" && dart test); done
 ```
 
 Run the tests from inside each package, as the loop does, because the tests load their fixtures from

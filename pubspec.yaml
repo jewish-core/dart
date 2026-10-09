@@ -5,9 +5,9 @@ environment:
   sdk: ^3.9.0
 
 workspace:
-  - jewish_date
-  - jewish_holidays
-  - jewish_zmanim
+  - packages/jewish_date
+  - packages/jewish_holidays
+  - packages/jewish_zmanim
 
 dev_dependencies:
   lints: ^6.0.0

@@ -23,11 +23,11 @@ jobs:
       - run: dart analyze --fatal-infos
       - name: Test
         run: |
-          for p in jewish_date jewish_holidays jewish_zmanim; do
+          for p in packages/*/; do
             (cd "$p" && dart test)
           done
       - name: Publish dry run
         run: |
-          for p in jewish_date jewish_holidays jewish_zmanim; do
+          for p in packages/*/; do
             (cd "$p" && dart pub publish --dry-run)
           done
